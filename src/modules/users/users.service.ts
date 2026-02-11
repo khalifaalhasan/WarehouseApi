@@ -1,5 +1,5 @@
 import { ConflictException, Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from 'src/modules/prisma/prisma.service';
 import { RegisterDto } from '../auth/dto/register.dto';
 import * as bcrypt from 'bcrypt';
 import { User } from 'src/generated/client';
@@ -7,8 +7,6 @@ import { User } from 'src/generated/client';
 @Injectable()
 export class UsersService {
   constructor(private prisma: PrismaService) {}
-
- 
 
   async createUser(data: RegisterDto) {
     // 1. Cek apakah email sudah ada (Idempotency sederhana)
