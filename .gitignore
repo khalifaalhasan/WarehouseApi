@@ -1,0 +1,10 @@
+/.env
+
+# Database Credentials
+POSTGRES_USER=klinik_admin
+POSTGRES_PASSWORD=super_secret_klinik_2026
+POSTGRES_DB=klinik_rme_db
+POSTGRES_PORT=5432
+
+# Redis
+REDIS_PORT=6379
